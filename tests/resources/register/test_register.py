@@ -12,6 +12,7 @@ class RegisterTests():
         assert result_data["id"] != None
         assert result_data["token"] != None
 
+
     def test_unsuccesful_registration(self, register_uri, random_string):
         some_email = f"{random_string}@gmail.com"
         data = {"email": some_email}
