@@ -7,7 +7,7 @@ class RegisterTests():
         #build JSON payload for registration
         data = {"email": "eve.holt@reqres.in","password": "pistol"}
         result = requests.post(register_uri, json=data)
-        assert result.status_code == 200
+        assert result.status_code == 500
         result_data = result.json()
         assert result_data["id"] != None
         assert result_data["token"] != None
